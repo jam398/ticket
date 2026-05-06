@@ -58,6 +58,7 @@ This index helps agents find the current durable artifacts before making changes
 | CHANGE-004 | `docs/change-notes/change-004-it-runbook-ai-actions.md` | Completed | Make AI recommended actions concrete IT/support runbooks |
 | CHANGE-005 | `docs/change-notes/change-005-ai-evidence-apply-clarity.md` | Completed | Clarify AI evidence ticket references and apply button behavior |
 | CHANGE-006 | `docs/change-notes/change-006-readme-entry-page-update.md` | Completed | Update README with current landing, create-ticket, and resolve-ticket page explanations |
+| CHANGE-007 | `docs/change-notes/change-007-auto-deploy-config.md` | Completed | Add Render backend and GitHub Pages frontend auto-deploy configuration |
 
 ## Validation
 

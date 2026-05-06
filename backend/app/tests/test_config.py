@@ -21,6 +21,14 @@ def test_settings_read_openai_key_from_environment(monkeypatch):
     assert settings.llm_model == "test-model"
 
 
+def test_settings_reads_cors_origins_from_environment(monkeypatch):
+    monkeypatch.setenv("CORS_ALLOWED_ORIGINS", "http://localhost:3000, https://jam398.github.io")
+
+    settings = get_settings()
+
+    assert settings.cors_allowed_origins == ["http://localhost:3000", "https://jam398.github.io"]
+
+
 def test_ai_client_uses_openai_client_when_real_key_configured(monkeypatch):
     monkeypatch.setenv("OPENAI_API_KEY", "sk-test-value")
 

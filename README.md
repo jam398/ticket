@@ -110,6 +110,26 @@ npm run dev -- --hostname 127.0.0.1 --port 3000
 
 Open `http://127.0.0.1:3000` for the workflow entry page. Use `Create Ticket` for the employee form or `Resolve Ticket` for the IT/support dashboard.
 
+## Auto Deploy
+
+Backend deploys from `render.yaml` to Render as `triagepilot-ai-backend`.
+
+- Render uses `backend/` as the service root.
+- Deploys trigger from commits to `main`.
+- The service uses Render's free plan.
+- The backend runs with Python `3.11.9`.
+- SQLite and vector data are ephemeral on the free plan. The backend seeds demo data on startup, and created/resolved tickets can reset when Render redeploys, restarts, or spins down.
+- `OPENAI_API_KEY` is configured as a Render secret during Blueprint setup.
+- `CORS_ALLOWED_ORIGINS` includes local development and `https://jam398.github.io`.
+
+Frontend deploys with `.github/workflows/deploy-frontend.yml` to GitHub Pages.
+
+- The workflow runs on commits to `main` that change `frontend/**` or the workflow file.
+- It runs `npm ci`, `npm run lint`, and `npm run build`.
+- During the Pages build, `next.config.ts` switches to static export mode.
+- The default deployed API URL is `https://triagepilot-ai-backend.onrender.com`.
+- To override the backend URL, set the GitHub repository variable `NEXT_PUBLIC_API_BASE_URL`.
+
 ## Tests
 
 ```powershell

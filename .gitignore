@@ -10,4 +10,5 @@ backend/app/__pycache__/
 backend/app/tests/__pycache__/
 frontend/.env.local
 frontend/.next/
+frontend/out/
 frontend/node_modules/
