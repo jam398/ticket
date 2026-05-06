@@ -57,6 +57,7 @@ This index helps agents find the current durable artifacts before making changes
 | CHANGE-003 | `docs/change-notes/change-003-resolution-first-ai-actions.md` | Completed | Make AI suggested responses and actions resolution-first instead of routing-first |
 | CHANGE-004 | `docs/change-notes/change-004-it-runbook-ai-actions.md` | Completed | Make AI recommended actions concrete IT/support runbooks |
 | CHANGE-005 | `docs/change-notes/change-005-ai-evidence-apply-clarity.md` | Completed | Clarify AI evidence ticket references and apply button behavior |
+| CHANGE-006 | `docs/change-notes/change-006-readme-entry-page-update.md` | Completed | Update README with current landing, create-ticket, and resolve-ticket page explanations |
 
 ## Validation
 
